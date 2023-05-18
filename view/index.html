@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .tbl,
+      td {
+        border: 1px solid gray;
+        border-spacing: 0;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+
+      input,
+      button {
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      .itemNames {
+        width: 300px;
+      }
+
+      .itemNames2 {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>List products</h1>
+    <form method="POST">
+      <input type="text" name="itemName" placeholder="Input item" />
+      <input
+        type="number"
+        name="itemPrice"
+        placeholder="Input price"
+        min="0"
+        step="1"
+      />
+      <button type="submit">ADD ITEM</button>
+    </form>
+    <table class="tbl">
+      <tr>
+        <td>#</td>
+        <td class="itemNames">Name</td>
+        <td class="itemNames2">Price</td>
+      </tr>
+      {add-items-to-list}
+    </table>
+  </body>
+</html>
